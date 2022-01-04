@@ -27,7 +27,8 @@ func main() {
 				header, err := reader.NextFrame()
 				if err != nil {
 					// handle error
-					fmt.Println(err)
+					fmt.Println("\n\t", "Next frame error", err)
+					//return
 
 				}
 				fmt.Println(header)
@@ -37,9 +38,13 @@ func main() {
 
 				if _, err = io.Copy(writer, reader); err != nil {
 					// handle error
+					fmt.Println("\n\t", "Copy error", err)
+					return
 				}
 				if err = writer.Flush(); err != nil {
 					// handle error
+					fmt.Println("\n\t", "Flush error:", err)
+					return
 				}
 			}
 		}()
