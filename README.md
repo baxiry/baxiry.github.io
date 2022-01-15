@@ -1,2 +1,1 @@
-# imhub
-### Instant Message Hub
+simple blog
