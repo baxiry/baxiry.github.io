@@ -1,13 +1,10 @@
 h3{
-    padding: 2%;
     color:grey;
     position: relative ;
 }
 
 body {
-    padding-right: 8%;
-    padding-left: 8%;
-    background-color: whitesmoke;
+    background-color: #eee;
 }
 
 .content {
@@ -16,6 +13,10 @@ body {
     border-radius: 5px;
 }
 
+.center {
+    background-color: whitesmoke;
+    width:50%;
+}
 
 /*-------  some media query ---------*/
 /* For desktop: */

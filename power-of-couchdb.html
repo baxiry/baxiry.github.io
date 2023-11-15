@@ -12,18 +12,18 @@
 
     <script type='application/ld+json'>
     {
-      "@context": "https://bashery.github.io/b/", 
+      "@context": "https://baxiry.github.io", 
       "@type": "BlogPosting",
       "headline": "what is couchDB",
       "description": "What is couchDB. or How you shold see couchdb",
-      "url": "https://bashery.github.io/b/power-of-couchdb",
+      "url": "https://baxiry.github.io/power-of-couchdb",
       "datePublished": "2021-8-5",
       "dateCreated": "2021-8-5",
       "dateModified": "2021-8-5",
       "publisher": "bashery",
       "author": {
         "@type": "Person",
-        "name": "bashery"
+        "name": "baxiry"
       }
     }
     </script>
@@ -31,42 +31,45 @@
     <title>Power of couchdb</title>
 </head>
 <body>
-<div class="container-md">
-<div class="m-5">
+<div class="center">
   <h3 class="m-3">Power of CouchDB</h3>  
   <b>Auther: <a href="https://stackoverflow.com/users/2497244/tobiak777">tobiak777</a></b>
-<div class="fs-5">
-    <p>
+<div>
+<p>
 <br>
 There's much more to Couchdb than the ability to develop CouchApps. Most people use CouchDb in a classical 3-tiers web architecture.
-
 <br>
 In practice the deciding factor for most people will be the fact that MongoDb allows ad-hoc querying with a SQL like syntax while CouchDb doesn't (you've got to create map/reduce views which turns some people off even though creating these views is Rapid Application Development friendly - they have nothing to do with stored procedures).
-
 <br>
 To address points raised in the accepted answer : CouchDb has a great versionning system, but it doesn't mean that it is only suited (or more suited) for places where versionning is important. Also, couchdb is heavy-write friendly thanks to its append-only nature (writes operations return in no time while guaranteeing that no data will ever be lost).
-
 <br>
 One very important thing that is not mentioned by anyone is the fact that CouchDb relies on b-tree indexes. This means that whether you have 1 "row" or 20 billions, the querying time will always remain below 10ms. This is a game changer which makes CouchDb a low-latency and read-friendly database, and this really shouldn't be overlooked.
-
 <br>
 To be fair and exhaustive the advantage MongoDb has over CouchDb is tooling and marketing. They have first-class citizen tools for all major languages and platforms making the on-boarding easy and this added to their adhoc querying makes the transition from SQL even easier.
-
 <br>
 CouchDb doesn't have this level of tooling - even though there are many libraries available today - but CouchDb is exposed as an HTTP API and it is therefore quite easy to create a wrapper in your favorite language to talk with it. I personally like this approach as it avoids bloat and allows you to only take what you want (interface segregation principle).
-
 <br>
 So I'd say using one or the other is largely a matter of comfort and preference with their paradigms. CouchDb approach "just fits", for certain people, but if after learning about the database features (in the exhaustive official guide) you don't have your "hell yeah" moment, you should probably move on.
-
 <br>
 I'd discourage using CouchDb if you just want to use "the right tool for the right job". because you'll find out that you can't just use it that way and you'll end up being pissed and writing blog posts such as "Where are joins in CouchDb ?" and "Where is transaction management ?". Indeed Couchdb is - paradoxically - very transparent but at the same time requires a paradigm shift and a change in the way you approach problems to really shine (and really work).
-
 <br>
 But once you've done that it really pays off. I'd personally need very strong reasons or a major deal breaker on a project to choose another database, but so far I haven't met any.
 </p>
 <b><a href="https://stackoverflow.com/questions/12437790/when-to-use-couchdb-over-mongodb-and-vice-versa/37632625#37632625">reference</a></b>
 </div>
 </div>
-</div>
+<style>
+
+
+
+body {
+    background-color: #eee;
+    width:50%;
+    padding: 30%;
+    padding-top: 8%;
+}
+
+
+</style>
 </body>
 </html>
