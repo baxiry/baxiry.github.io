@@ -10,10 +10,12 @@ h3{
 
 body {
     background-color: #eee;
-    text-decoration: none;
 
 }
 
+a {
+    text-decoration: none;
+}
 .content {
     background-color: white;
     padding:2%;
